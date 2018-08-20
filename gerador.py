@@ -6,7 +6,7 @@ from core.framework.flask import Flask
 from core.instala_framework import InstalaFramework
 from core.sistema_operacional.linux import Linux
 from core.sistema_operacional.windows import Windows
-from core.diretorio import Diretorio
+from core.projeto.diretorio import Diretorio
 
 
 import platform
@@ -23,9 +23,9 @@ if __name__ == '__main__':
 
     framework = eval(framework)
 
+    Diretorio().criar_diretorio(nome_projeto)
+
     AmbienteVirtual().instalar_virtual_env(tipo_sistema_operacional,
                                            nome_projeto)
 
     InstalaFramework().instalar_framework(framework)
-
-    # Diretorio().criar_diretorio('projeto')
