@@ -1,11 +1,11 @@
 from __future__ import absolute_import, unicode_literals
 
 from core.ambiente_virtual import AmbienteVirtual
-from core.django import Django
-from core.flask import Flask
+from core.framework.django import Django
+from core.framework.flask import Flask
 from core.instala_framework import InstalaFramework
-from core.linux import Linux
-from core.windows import Windows
+from core.sistema_operacional.linux import Linux
+from core.sistema_operacional.windows import Windows
 from core.diretorio import Diretorio
 
 
